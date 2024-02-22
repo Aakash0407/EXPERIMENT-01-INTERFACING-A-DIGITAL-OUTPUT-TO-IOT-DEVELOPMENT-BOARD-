@@ -1,3 +1,7 @@
+## DATE: 13.2.2024
+## NAME: Aakash P
+## ROLL NO: 212222110001
+## DEPARTMENT: CSE(IOT)
 # EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD
 
 ## Aim: To Interface a Digital output (LED) to ARM IOT development board and write a  program to blink an led 
@@ -74,17 +78,26 @@ The main features of LPC2148 include the following.
 
 
 
-
-
-
 ## STM 32 CUBE PROGRAM :
+```
+#include "main.h"
+#include "stdio.h"
 
-
-
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+	  HAL_Delay(1000);
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+	  HAL_Delay(1000);
+  }
+```
 ## Output  :
- 
- 
- 
+### LED ON
+<img src="https://github.com/Aakash0407/EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/118799103/33b3bcd4-f4ff-4d3c-9145-e2e425d1a936" width="700" height="800">
+
+### LED OFF
+<img src="https://github.com/Aakash0407/EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/118799103/0443f83b-e924-4763-9357-b01faff24126" width="700" height="800">
+
  
 ## Result :
 Interfacing a digital output with ARM microcontroller based IOT development is executed and the results are verified.
